@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NeuroTech Gadget</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background-color: lightsteelblue;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: white;
+      padding: 20px 40px;
+      border-bottom: 1px solid #ccc;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+.logo img {
+  height: 40px; 
+  width: auto;
+  vertical-align: margin-left;
+}
+    .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+}
+
+    #language-select {
+      padding: 5px 10px;
+      font-size: 14px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      background: white;
+      cursor: pointer;
+    }
+
+    /* Services Section */
+    .services {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .services h1 {
+      text-align: center;
+      font-size: 36px;
+      color: black;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    details {
+      background-color: #dce6f1;
+      margin: 15px auto;
+      padding: 20px;
+      border: 1px solid black;
+      border-radius: 25px;
+      max-width: 350px;
+      text-align: left;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: none;
+    }
+
+    /* Footer */
+.footer {
+  text-align: center;
+  padding: 30px;
+  background-color: #dce6f1; 
+  font-size: 14px;
+  color: #555;
+}
+
+.footer-icons a img {
+  margin: 0 8px;
+  vertical-align: middle;
+  transition: transform 0.2s;
+}
+
+.footer-icons a img:hover {
+  transform: scale(1.1);
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #333;
+  margin: 0 8px;
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html"><img src="logo.jpg" alt="NeuroTech Logo"></a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="shop.html" data-en="Shop" data-bm="Kedai">Shop</a></li>
+      <li><a href="services.html" data-en="Services" data-bm="Perkhidmatan">Services</a></li>
+      <li><a href="about.html" data-en="About" data-bm="Tentang">About</a></li>
+      <li><a href="corporate.html" data-en="Corporate" data-bm="Organisasi">Corporate</a></li>
+    </ul>
+    <select id="language-select">
+      <option value="en">EN</option>
+      <option value="bm">BM</option>
+    </select>
+  </nav>
+
+  <!-- Services -->
+  <section class="services">
+    <h1 data-en="Our Services" data-bm="Perkhidmatan Kami">Our Services</h1>
+
+    <details>
+      <summary data-en="Mobile Phone Repair" data-bm="Baiki Telefon Bimbit">Mobile Phone Repair</summary>
+      <ul>
+        <li data-en="Change screen" data-bm="Tukar skrin">Change screen</li>
+        <li data-en="Change battery" data-bm="Tukar bateri">Change battery</li>
+        <li data-en="Change charging port" data-bm="Tukar port pengecas">Change charging port</li>
+        <li data-en="Repair motherboard" data-bm="Baiki papan induk">Repair motherboard</li>
+      </ul>
+    </details>
+
+<details>
+      <summary data-en="Laptop & Computer Repair" data-bm="Baiki Laptop & Komputer">Laptop & Computer Repair</summary>
+      <ul>
+        <li data-en="Laptop format" data-bm="Format laptop">Laptop format</li>
+        <li data-en="Install software" data-bm="Pasang perisian">Install software</li>
+        <li data-en="Repair hardware" data-bm="Baiki perkakasan">Repair hardware</li>
+        <li data-en="Upgrade RAM & storage" data-bm="Naik taraf RAM & storan">Upgrade RAM & storage</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary data-en="Software Services" data-bm="Servis Perisian">Software Services</summary>
+      <ul>
+        <li data-en="Remove virus" data-bm="Buang virus">Remove virus</li>
+        <li data-en="Unlock phone" data-bm="Buka kunci telefon">Unlock phone</li>
+        <li data-en="Backup & recovery data" data-bm="Sandaran & pemulihan data">Backup & recovery data</li>
+        <li data-en="Install antivirus" data-bm="Pasang antivirus">Install antivirus</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary data-en="Custom Phone & Accessories" data-bm="Custom Telefon & Aksesori">Custom Phone & Accessories</summary>
+      <ul>
+        <li data-en="Screen protector installation" data-bm="Pemasangan pelindung skrin">Screen protector installation</li>
+        <li data-en="Custom casing & skin" data-bm="Custom casing & skin">Custom casing & skin</li>
+        <li data-en="Sell phone accessories" data-bm="Jual aksesori telefon">Sell phone accessories</li>
+        <li data-en="Custom sticker" data-bm="Pelekat custom">Custom sticker</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary data-en="Buy & Sell Gadgets" data-bm="Jual Beli Gajet">Buy & Sell Gadgets</summary>
+      <ul>
+        <li data-en="Sell new phone" data-bm="Jual telefon baru">Sell new phone</li>
+        <li data-en="Sell second-hand phone" data-bm="Jual telefon terpakai">Sell second-hand phone</li>
+        <li data-en="Trade-in old phone" data-bm="Trade-in telefon lama">Trade-in old phone</li>
+      </ul>
+    </details>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="contact.html" data-en="Contact Us" data-bm="Hubungi Kami">Contact Us</a>
+    </div>
+    <br>
+    <div><a href="https://instagram.com/neurotech" target="_blank">
+    <img src="ig.jpg" alt="Instagram" width="24" height="24"></a>
+    <a href="https://facebook.com/neurotech" target="_blank">
+    <img src="fb.jpg" alt="Facebook" width="24" height="24"></a>
+    <a href="https://tiktok.com/neurotech" target="_blank">
+    <img src="tt.jpg" alt="TikTok" width="24" height="24"></a>
+    </div>
+    <p data-en="&copy; 2025 NeuroTech. All rights reserved." data-bm="&copy; 2025 NeuroTech. Semua hak cipta terpelihara.">
+      &copy; 2025 NeuroTech. All rights reserved.
+    </p>
+    
+  </footer>
+
+  <!-- Language Switch Script -->
+  <script>
+    const languageSelect = document.getElementById("language-select");
+
+    languageSelect.addEventListener("change", function () {
+      const selectedLang = this.value;
+      const elements = document.querySelectorAll("[data-en]");
+
+      elements.forEach(function (el) {
+        el.textContent = el.getAttribute("data-" + selectedLang);
+      });
+    });
+  </script>
+</body>
+</html>

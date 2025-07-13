@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NeuroTech Gadget</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <script>
+  // Show button when user scrolls down
+  window.onscroll = function () {
+    const btn = document.getElementById("backToTopBtn");
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      btn.style.display = "block";
+    } else {
+      btn.style.display = "none";
+    }
+  };
+
+  // Scroll to top function
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">
+    <a href="index.html">
+  <img src="logo.jpg" alt="NeuroTech Logo">
+</a>
+</div>
+    <ul class="nav-links">
+      <li><a href="#" data-en="Shop" data-bm="Kedai">Shop</a></li>
+      <li><a href="services.html" data-en="Services" data-bm="Perkhidmatan">Services</a></li>
+      <li><a href="about.html" data-en="About" data-bm="Tentang">About</a></li>
+      <li><a href="corporate.html" data-en="Corporate" data-bm="Organisasi">Corporate</a></li>
+    </ul>
+    <!-- LANGUAGE SELECT -->
+    <select id="language-select">
+      <option value="en">EN</option>
+      <option value="bm">BM</option>
+    </select>
+  </nav>
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+  <div class="container">
+    <h1 style="text-align: center;"data-en="Contact Us." data-bm="Hubungi Kami.">Contact Us</h1>
+    <p style="text-align: center; color: solid black; font-size: 25px; font-weight: bold;"data-en="We are here and ready to give the best for you"
+    data-bm="Kami di sini dan bersedia memberikan yang terbaik untuk anda">"We are here and ready to give the best for you"</p>
+    <br><p></p>
+    <p style="text-align: center; color: black; font-size: 20px;"data-en="Need help with a device or have a question about our gadegt?"
+    data-bm="Perlukan bantuan dengan peranti atau ada soalan tentang gajet kami?">Need help with a device or have a question about our gadgets?</p>
+    <p style="text-align: center; color: black; font-size: 20px;"data-en="Our tect team is ready to assist you."data-bm="Pasukan teknikal kami sedia membantu anda.">Our tech team is ready to assist you.</p>
+    <p style="text-align: center; color: black; font-size: 20px;"data-en="We'll get back to you as soon as possible"data-bm="Kami akan menghubungi anda secepat mungkin:">We'll get back to you as soon as possible:</p>
+    <br><p></p>
+    <p style="text-align: center; color: black;">NEUROTECH GADGETS SDN.BHD.</p>
+    <br><p></p>
+    <p style="text-align: center; color: solid black; font-weight: bold;"data-en="Customer Services & General Inquiries"data-bm="Perkhidmatan Pelanggan & Pertanyaan Am">Customer Services & General Inquiries</p>
+    <p style="text-align: center; color: black;">ask@NeurotechGadgets.com</p>
+    <br><p></p>
+    <p style="text-align: center; color: solid black; font-weight: bold;"data-en="Neurotech Social Media"data-bm="NeuroTech Media Sosial">NeuroTech Social Media</p>
+    <p style="text-align: center; color: black;"><a href="https://instagram.com/neurotech" target="_blank">Instagram
+    <p style="text-align: center; color: black;"><a href="https://tiktok.com/neurotech" target="_blank">Tiktok</a></p>
+    <form action="#" method="post" class="contact-form">
+        <div class="form-row">
+      <input type="text" name="name" placeholder="Name" required /> 
+      <input type="email" name="email" placeholder="Email" required />
+    </div>
+    
+    <input type="text" name="contactnumber" placeholder="Contact Number" required />
+    <textarea name="comment" placeholder="Comment" required></textarea>
+    <div class="form-bottom">
+      <button type="submit">Send Message</button>
+    </div>
+    </form>
+    </div>
+  </div>
+</div>
+<!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="#" data-en="Contact Us" data-bm="Hubungi Kami">Contact Us</a>
+    </div>
+    <br>
+    <div><a href="https://instagram.com/neurotech" target="_blank">
+    <img src="ig.jpg" alt="Instagram" width="24" height="24"></a>
+    <a href="https://facebook.com/neurotech" target="_blank">
+    <img src="fb.jpg" alt="Facebook" width="24" height="24"></a>
+    <a href="https://tiktok.com/neurotech" target="_blank">
+    <img src="tt.jpg" alt="TikTok" width="24" height="24"></a>
+    </div>
+    <p data-en="&copy; 2025 NeuroTech. All rights reserved." data-bm="&copy; 2025 NeuroTech. Semua hak cipta terpelihara.">
+      &copy; 2025 NeuroTech. All rights reserved.
+    </p>
+    
+  </footer>
+</body>
+</html>
+</body>
+</html>

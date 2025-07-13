@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us - NeuroTech Gadget</title>
+    <link rel="stylesheet" href="style.css" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: lightsteelblue;
+  color: #111;
+}
+    /* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  position: sticky;
+  top: 0;
+  background-color: white; 
+  border-bottom: 1px solid #ccc;
+  z-index: 1000;
+}
+
+.logo img {
+  height: 40px; 
+  width: auto;
+  vertical-align: margin-left;
+}
+
+/* NAV LINKS */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+}
+
+    #language-select {
+      padding: 5px 10px;
+      font-size: 14px;
+      margin-left: 20px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      background: white;
+      cursor: pointer;
+    }
+
+    /* Main Section */
+    .about-section {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 40px;
+      background-color: #dce6f1;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .about-section h1 {
+      text-align: center;
+      font-size: 2.4em;
+      margin-bottom: 20px;
+      color: black;
+    }
+
+    .about-section h2 {
+      margin-top: 30px;
+      font-size: 1.6em;
+      color: #222;
+      border-left: 4px solid #0057b8;
+      padding-left: 10px;
+    }
+
+    .about-section p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      margin-top: 10px;
+    }
+
+    /* Map */
+    .map-container {
+      margin-top: 20px;
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 350px;
+      border: none;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    /* Footer */
+    .footer {
+  text-align: center;
+  padding: 30px;
+  background-color: #dce6f1; 
+  font-size: 14px;
+  color: #555;
+}
+
+.footer-icons a img {
+  margin: 0 8px;
+  vertical-align: middle;
+  transition: transform 0.2s;
+}
+
+.footer-icons a img:hover {
+  transform: scale(1.1);
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #333;
+  margin: 0 8px;
+}
+      .about-section {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="logo.jpg" alt="NeuroTech Logo">
+      </a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="shop.html" data-en="Shop" data-bm="Kedai">Shop</a></li>
+      <li><a href="services.html" data-en="Services" data-bm="Perkhidmatan">Services</a></li>
+      <li><a href="about.html" data-en="About" data-bm="Tentang">About</a></li>
+      <li><a href="corporate.html" data-en="Corporate" data-bm="Organisasi">Corporate</a></li>
+    </ul>
+    <select id="language-select">
+      <option value="en">EN</option>
+      <option value="bm">BM</option>
+    </select>
+  </nav>
+
+  <!-- About Us Section -->
+  <div class="about-section">
+    <h1>About Us</h1>
+
+    <h2>Location</h2>
+    <p>Lot 257, Persiaran Teknologi, Subang Hi-tech Industrial Park, 40200 Shah Alam, Selangor</p>
+
+    <div class="map-container">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15930.334799398372!2d101.5477976!3d3.0619619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4dbfb80bb42d%3A0x331c1c74fd3e1d5f!2sLot%20257%2C%20Persiaran%20Teknologi%2C%20Subang%20Hi-Tech%20Industrial%20Park%2C%2040200%20Shah%20Alam%2C%20Selangor!5e0!3m2!1sen!2smy!4v1720347789895!5m2!1sen!2smy" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+    <h2>Vision</h2>
+    <p>To be the top destination for the latest iPhone models, offering unmatched value, service, and innovation to mobile users everywhere.</p>
+
+    <h2>Mission</h2>
+    <p>At NeuroTech Gadget, we are committed to providing customers with genuine iPhones — from iPhone 13 to iPhone 16 — at competitive prices, with reliable support and a seamless shopping experience.</p>
+
+    <h2>Company History</h2>
+    <p>Established in 2021, NeuroTech Gadget began with a mission to make the latest Apple technology accessible to everyone. Starting with local sales of the iPhone 13, we've expanded to offer models up to the iPhone 16, serving thousands of satisfied customers and building a reputation for trust and tech excellence.</p>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="contact.html" data-en="Contact Us" data-bm="Hubungi Kami">Contact Us</a>
+    </div>
+    <br>
+    <div><a href="https://instagram.com/neurotech" target="_blank">
+    <img src="ig.jpg" alt="Instagram" width="24" height="24"></a>
+    <a href="https://facebook.com/neurotech" target="_blank">
+    <img src="fb.jpg" alt="Facebook" width="24" height="24"></a>
+    <a href="https://tiktok.com/neurotech" target="_blank">
+    <img src="tt.jpg" alt="TikTok" width="24" height="24"></a>
+    </div>
+    <p data-en="&copy; 2025 NeuroTech. All rights reserved." data-bm="&copy; 2025 NeuroTech. Semua hak cipta terpelihara.">
+      &copy; 2025 NeuroTech. All rights reserved.
+    </p>
+    
+  </footer>
+
+  <!-- Language Switcher Script -->
+  <script>
+    const langSelect = document.getElementById('language-select');
+    langSelect.addEventListener('change', () => {
+      const selectedLang = langSelect.value;
+      document.querySelectorAll('[data-en]').forEach(el => {
+        el.innerText = el.dataset[selectedLang];
+      });
+    });
+  </script>
+
+</body>
+</html>

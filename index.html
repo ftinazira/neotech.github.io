@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NeuroTech Gadget</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <script>
+  // Show button when user scrolls down
+  window.onscroll = function () {
+    const btn = document.getElementById("backToTopBtn");
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      btn.style.display = "block";
+    } else {
+      btn.style.display = "none";
+    }
+  };
+
+  // Scroll to top function
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">
+    <a href="index.html">
+  <img src="logo.jpg" alt="NeuroTech Logo">
+</a>
+</div>
+    <ul class="nav-links">
+      <li><a href="shop.html" data-en="Shop" data-bm="Kedai">Shop</a></li>
+      <li><a href="services.html" data-en="Services" data-bm="Perkhidmatan">Services</a></li>
+      <li><a href="about.html" data-en="About" data-bm="Tentang">About</a></li>
+      <li><a href="corporate.html" data-en="Corporate" data-bm="Organisasi">Corporate</a></li>
+    </ul>
+    <!-- LANGUAGE SELECT -->
+    <select id="language-select">
+      <option value="en">EN</option>
+      <option value="bm">BM</option>
+    </select>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1 data-en="Smart Gadgets Always With You." data-bm="Gajet Pintar Selalu Bersama Anda.">
+      Smart Gadgets Always With You.
+    </h1>
+    <p data-en="Experience intelligent gadgets crafted for simplicity, style, and everyday life." data-bm="Alami alat pintar yang direka untuk kesederhanaan, gaya dan kehidupan seharian.">
+      Experience intelligent gadgets crafted for simplicity, style, and everyday life.
+    </p>
+    <a href="#" class="cta-button" data-en="Shop Now" data-bm="Beli Sekarang">Shop Now</a>
+  </section>
+
+  <!-- PRODUCTS GRID -->
+<!-- PRODUCT VIDEO SECTION -->
+<section class="product-grid" style="text-align: center;">
+  <video width="100% -90%" autoplay muted loop>
+    <source src="video.mp4" type="video/mp4">
+  </video>
+</section>
+
+<!-- FEATURED PRODUCTS SECTION -->
+<section class="featured-products">
+  <h2 class="section-title" data-en="Best Sellers" data-bm="Jualan Terlaris">Best Sellers</h2>
+  <div class="product-grid">
+    <div class="product-card">
+      <img src="ip16.jpg" alt="iPhone 16">
+      <br><p></p>
+      <br><p></p>
+      <br><p></p>
+      <br><p></p>
+      <h3>iPhone 16</h3>
+      <p class="price">RM3,999 - RM5,499</p>
+    </div>
+
+    <div class="product-card">
+      <img src="ip16prom.jpg" alt="iPhone 16 Pro Max">
+      <h3>iPhone 16 Pro Max</h3>
+      <p class="price">RM5,999 - RM7,999</p>
+    </div>
+
+    <div class="product-card">
+      <img src="ipadair.jpg" alt="iPad Air">
+      <br><p></p>
+      <br><p></p>
+      <br><p></p>
+      <br><p></p>
+      <br><p></p>
+      <h3>iPad Air</h3>
+      <p class="price">RM2,799 - RM4,099</p>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="contact.html" data-en="Contact Us" data-bm="Hubungi Kami">Contact Us</a>
+    </div>
+    <br>
+    <div><a href="https://instagram.com/neurotech" target="_blank">
+    <img src="ig.jpg" alt="Instagram" width="24" height="24"></a>
+    <a href="https://facebook.com/neurotech" target="_blank">
+    <img src="fb.jpg" alt="Facebook" width="24" height="24"></a>
+    <a href="https://tiktok.com/neurotech" target="_blank">
+    <img src="tt.jpg" alt="TikTok" width="24" height="24"></a>
+    </div>
+    <p data-en="&copy; 2025 NeuroTech. All rights reserved." data-bm="&copy; 2025 NeuroTech. Semua hak cipta terpelihara.">
+      &copy; 2025 NeuroTech. All rights reserved.
+    </p>
+    
+  </footer>
+<button onclick="scrollToTop()" id="backToTopBtn" title="Go to top">↑</button>
+
+</body>
+</html>

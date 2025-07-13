@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NeuroTech Products</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: lightsteelblue;
+      color: #111;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      position: sticky;
+      top: 0;
+      background-color: white; 
+      border-bottom: 1px solid #ccc;
+      z-index: 1000;
+    }
+
+    .logo img {
+      height: 40px; 
+      width: auto;
+      vertical-align: margin-left;
+    }
+
+    /* NAV LINKS */
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #111;
+      font-weight: 500;
+    }
+
+    #language-select {
+      padding: 5px 10px;
+      font-size: 14px;
+      margin-left: 20px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      background: white;
+      cursor: pointer;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .product-section {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      margin-bottom: 40px;
+    }
+
+    .product-card {
+      background: #dce6f1;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .product-card:hover {
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: contain;
+      border-radius: 10px;
+      background-color: #f9f9f9;
+    }
+
+    .product-card h3 {
+      margin: 15px 0 10px;
+      font-size: 20px;
+    }
+
+    .product-card p {
+      color: #555;
+    }
+
+    .price {
+      color: black;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .buy-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: black;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.2s;
+    }
+
+    .buy-btn:hover {
+      background-color: #0b7dda;
+    }
+    
+    /* FOOTER */
+    .footer {
+      text-align: center;
+      padding: 30px;
+      background-color: #dce6f1; 
+      font-size: 14px;
+      color: #555;
+      margin-top: 40px;
+    }
+
+    .footer-icons {
+      margin: 15px 0;
+    }
+
+    .footer-icons a img {
+      margin: 0 8px;
+      vertical-align: middle;
+      transition: transform 0.2s;
+    }
+
+    .footer-icons a img:hover {
+      transform: scale(1.1);
+    }
+
+    .footer-links {
+      margin-bottom: 15px;
+    }
+
+    .footer-links a {
+      text-decoration: none;
+      color: #333;
+      margin: 0 8px;
+      font-weight: 500;
+    }
+
+    .footer-links a:hover {
+      color: #0b7dda;
+    }
+
+    .product-card select {
+      width: 50%;
+      padding: 8px;
+      margin: 6px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="logo.jpg" alt="NeuroTech Logo">
+      </a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="shop.html" data-en="Shop" data-bm="Kedai">Shop</a></li>
+      <li><a href="services.html" data-en="Services" data-bm="Perkhidmatan">Services</a></li>
+      <li><a href="about.html" data-en="About" data-bm="Tentang">About</a></li>
+      <li><a href="corporate.html" data-en="Corporate" data-bm="Organisasi">Corporate</a></li>
+    </ul>
+    <!-- LANGUAGE SELECT -->
+    <select id="language-select">
+      <option value="en">EN</option>
+      <option value="bm">BM</option>
+    </select>
+  </nav>
+
+  <h1>Our Products</h1>
+
+  <div class="product-section">
+    <!-- iPhones -->
+    <div class="product-card">
+      <img src="ip13.jpg" alt="iPhone 13">
+      <h3>iPhone 13</h3>
+      <p style="text-align: justify;">Sleek and durable design with a vibrant 6.1‑inch Super Retina XDR display, powered by the ultra-fast A15 Bionic chip for smooth performance and efficient battery life.</p>
+
+      <label>Color:</label>
+      <select class="color-select">
+        <option value="Blue">Blue</option>
+        <option value="Pink">Pink</option>
+        <option value="Green">Green</option>
+        <option value="Starlight">Starlight</option>
+        <option value="Red">Red</option>
+        <option value="Midnight">Midnight</option>
+      </select>
+      <br>
+      <label>Storage:</label>
+      <select class="storage-select" onchange="updatePrice(this)">
+        <option value="128" data-price="2,799">128GB — RM2,799</option>
+        <option value="256" data-price="3,199">256GB — RM3,199</option>
+        <option value="512" data-price="3,799">512GB — RM3,799</option>
+      </select>
+
+      <div class="price">RM2,799</div>
+
+      <a href="checkout.html" class="buy-btn" onclick="goToCheckout(this)">Buy Now</a>
+    </div>
+
+    <div class="product-card">
+      <img src="ip14.jpg" alt="iPhone 14">
+      <h3>iPhone 14</h3>
+      <p style="text-align: justify;"> Featuring a stunning 6.1‑inch Super Retina XDR display, A15 Bionic chip, and advanced dual-camera system. </p>
+      <br><p></p>
+      <label>Color:</label>
+      <select class="color-select">
+        <option value="Blue">Blue</option>
+        <option value="Pink">Pink</option>
+        <option value="Yellow">Yellow</option>
+        <option value="Starlight">Starlight</option>
+        <option value="Red">Red</option>
+        <option value="Midnight">Midnight</option>
+      </select>
+      <br>
+      <label>Storage:</label>
+      <select class="storage-select" onchange="updatePrice(this)">
+        <option value="128" data-price="3,799">128GB — RM3,799</option>
+        <option value="256" data-price="4,299">256GB — RM4,299</option>
+        <option value="512" data-price="5,299">512GB — RM5,299</option>
+      </select>
+
+      <div class="price">RM3,799</div>
+
+      <a href="checkout.html" class="buy-btn" onclick="goToCheckout(this)">Buy Now</a>
+    </div>
+
+    <div class="product-card">
+      <img src="ip15.jpg" alt="iPhone 15">
+      <h3>iPhone 15</h3>
+      <p style="text-align: justify;">Featuring a vibrant 6.1‑inch Super Retina XDR display, a powerful 48MP main camera, and the advanced A16 Bionic chip, it delivers top-tier speed and pro-level photography.</p>
+
+      <label>Color:</label>
+      <select class="color-select">
+        <option value="Blue">Blue</option>
+        <option value="Pink">Pink</option>
+        <option value="Yellow">Yellow</option>
+        <option value="Green">Green</option>
+        <option value="Black">Black</option>
+      </select>
+      <br>
+      <label>Storage:</label>
+      <select class="storage-select" onchange="updatePrice(this)">
+        <option value="128" data-price="4,399">128GB — RM4,399</option>
+        <option value="256" data-price="4,899">256GB — RM4,899</option>
+        <option value="512" data-price="5,899">512GB — RM5,899</option>
+      </select>
+
+      <div class="price">RM4,399</div>
+
+      <a href="checkout.html" class="buy-btn" onclick="goToCheckout(this)">Buy Now</a>
+    </div>
+
+    <div class="product-card">
+      <img src="ip15pro.jpg" alt="iPhone 15 Pro">
+      <h3>iPhone 15 Pro</h3>
+      <p style="text-align: justify;">Featuring a sharp 6.1‑inch Super Retina XDR OLED display with ProMotion (120Hz), Dynamic Island, and Always‑On. </p>
+      <br><p></p>
+      <label>Color:</label>
+      <select class="color-select">
+        <option value="Black titanium">Black titanium</option>
+        <option value="White titanium">White titanium</option>
+        <option value="Blue titanium">Blue titanium</option>
+        <option value="Natural titanium">Natural titanium</option>
+      </select>
+      <br>
+      <label>Storage:</label>
+      <select class="storage-select" onchange="updatePrice(this)">
+        <option value="128" data-price="5,499">128GB — RM5,499</option>
+        <option value="256" data-price="5,999">256GB — RM5,999</option>
+        <option value="512" data-price="6,999">512GB — RM6,999</option>
+        <option value="1" data-price="7,999">1TB — RM7,999</option>
+      </select>
+
+      <div class="price">RM5,499</div>
+
+      <a href="checkout.html" class="buy-btn" onclick="goToCheckout(this)">Buy Now</a>
+    </div>
+
+    <div class="product-card">
+      <img src="ipp15prom.jpg" alt="iPhone 15 Pro Max">
+      <h3>iPhone 15 Pro Max</h3>
+      <p style="text-align: justify;">Sleek 6.7‑inch Super Retina XDR OLED display (120Hz ProMotion, up to 2,000‑nit peak brightness). Built on lightweight grade‑5 titanium, it weighs just 221g. </p>
+      <br><p></p>
+      <label>Color:</label>
+      <select class="color-select">
+        <option value="Black titanium">Black titanium</option>
+        <option value="White titanium">White titanium</option>
+        <option value="Blue titanium">Blue titanium</option>
+        <option value="Natural titanium">Natural titanium</option>
+      </select>
+      <br>
+      <label>Storage:</label>
+      <select class="storage-select" onchange="updatePrice(this)">
+        <option value="256" data-price="6,499">256GB — RM6,499</option>
+        <option value="512" data-price="7,499">512GB — RM7,499</option>
+        <option value="1" data-price="8,499">1TB — RM8,499</option>
+      </select>
+
+      <div class="price">RM6,499</div>
+
+      <a href="checkout.html" class="buy-btn" onclick="goToCheckout(this)">Buy Now</a>
+    </div>
+
+    <div class="product-card">
+      <img src="ip16.jpg" alt="iPhone 16">
+      <h3>iPhone 16</h3>
+      <p style="text-align: justify;">Sleek 6.1″ Super Retina XDR OLED display, powered by the new A18 chip with AI enhancements and faster 5G connectivity. It introduces both the Action Button (replacing the mute switch).</p>
+      <br>
+      <label>Color:</label>
+      <select class="color-select">
+        <option value="Black ">Black</option>
+        <option value="White">White</option>
+        <option value="Pink">Pink</option>
+        <option value="Teal">Teal</option>
+        <option value="Ultramarine">Ultramarine</option>
+      </select>
+      <br>
+      <label>Storage:</label>
+      <select class="storage-select" onchange="updatePrice(this)">
+        <option value="256" data-price="3,999">256GB — RM3,999</option>
+        <option value="512" data-price="4,499">512GB — RM4,499</option>
+        <option value="1" data-price="5,499">1TB — RM5,499</option>
+      </select>
+
+      <div class="price">RM3,999</div>
+
+      <a href="checkout.html" class="buy-btn" onclick="goToCheckout(this)">Buy Now</a>
+    </div>
+
+    <div class="product-card">
+      <img src="ip16pro.jpg" alt="iPhone 16 Pro">
+      <h3>iPhone 16 Pro</h3>
+      <p style="text-align: justify;">6.3‑inch Super Retina XDR OLED display with 120 Hz ProMotion and Always‑On capabilities. It's powered by the cutting-edge A18 Pro chip—a 3 nm powerhouse featuring a 6‑core CPU.</p>
+      <br>
+      <label>Color:</label>
+      <select class="color-select">
+        <option value="Black titanium">Black titanium</option>
+        <option value="White titanium">White titanium</option>
+        <option value="Blue titanium">Blue titanium</option>
+        <option value="Desert titanium">Desert titanium</option>
+      </select>
+      <br>
+      <label>Storage:</label>
+      <select class="storage-select" onchange="updatePrice(this)">
+        <option value="128" data-price="4,999">256GB — RM4,999</option>
+        <option value="256" data-price="5,499">256GB — RM5,499</option>
+        <option value="512" data-price="6,499">512GB — RM6,499</option>
+        <option value="1" data-price="7,499">1TB — RM7,499</option>
+      </select>
+
+      <div class="price">RM4,999</div>
+
+      <a href="checkout.html" class="buy-btn" onclick="goToCheckout(this)">Buy Now</a>
+    </div>
+
+    <div class="product-card">
+      <img src="ip16prom.jpg" alt="iPhone 16 Pro Max">
+      <h3>iPhone 16 Pro Max</h3>
+      <p style="text-align: justify;">6.9‑inch Super Retina XDR OLED display, rapid 120 Hz ProMotion, and crafted from lightweight grade‑5 titanium for both durability and elegance.</p>
+      <br>
+      <br>
+      <label>Color:</label>
+      <select class="color-select">
+        <option value="Black titanium">Black titanium</option>
+        <option value="White titanium">White titanium</option>
+        <option value="Blue titanium">Blue titanium</option>
+        <option value="Desert titanium">Desert titanium</option>
+      </select>
+      <br>
+      <label>Storage:</label>
+      <select class="storage-select" onchange="updatePrice(this)">
+        <option value="256" data-price="5,999">256GB — RM5,999</option>
+        <option value="512" data-price="6,999">512GB — RM6,999</option>
+        <option value="1" data-price="7,999">1TB — RM7,999</option>
+      </select>
+
+      <div class="price">RM5,999</div>
+
+      <a href="checkout.html" class="buy-btn" onclick="goToCheckout(this)">Buy Now</a>
+    </div>
+
+    <!-- MacBooks & iPads -->
+    <div class="product-card">
+      <img src="ipadmini.jpg" alt="iPad Mini">
+      <h3>iPad Mini</h3>
+      <p style="text-align: justify;">Features an 8.3‑inch Liquid Retina display with P3 wide color and True Tone, powered by the high-performance A17 Pro chip.</p>
+      <br>
+      <br>
+      <label>Color:</label>
+      <select class="color-select">
+        <option value="Space grey">Space grey</option>
+        <option value="Purple">Purple</option>
+        <option value="Blue">Blue</option>
+        <option value="Starlight">Starlight</option>
+      </select>
+      <br>
+      <label>Storage:</label>
+      <select class="storage-select" onchange="updatePrice(this)">
+        <option value="128" data-price="2,199">128GB — RM2,199</option>
+        <option value="256" data-price="2,599">256GB — RM2,599</option>
+        <option value="512" data-price="3,499">512GB— RM3,499</option>
+      </select>
+
+      <div class="price">RM2,199</div>
+
+      <a href="checkout.html" class="buy-btn" onclick="goToCheckout(this)">Buy Now</a>
+    </div>
+
+    <div class="product-card">
+      <img src="ipadair.jpg" alt="iPad Air">
+      <h3>iPad Air</h3>
+      <p style="text-align: justify;">11‑inch and 13‑inch Liquid Retina displays with P3 wide color, True Tone, Touch ID, USB‑C, and support for Apple Pencil Pro and the latest Magic Keyboard. </p>
+      <br>
+      <label>Color:</label>
+      <select class="color-select">
+        <option value="Space grey">Space grey</option>
+        <option value="Purple">Purple</option>
+        <option value="Blue">Blue</option>
+        <option value="Starlight">Starlight</option>
+      </select>
+      <br>
+      <label>Storage:</label>
+      <select class="storage-select" onchange="updatePrice(this)">
+        <option value="128" data-price="2,799">128GB — RM2,799</option>
+        <option value="256" data-price="3,199">256GB — RM3,199</option>
+        <option value="512" data-price="4,099">512GB— RM4,099</option>
+      </select>
+
+      <div class="price">RM2,799</div>
+
+      <a href="checkout.html" class="buy-btn" onclick="goToCheckout(this)">Buy Now</a>
+    </div>
+
+    <div class="product-card">
+      <img src="macair.jpg" alt="Macbook Air">
+      <h3>Macbook Air</h3>
+      <p style="text-align: justify;">13″ and 15″ sizes, featuring Liquid Retina displays, MagSafe charging, 1080p FaceTime cameras with Center Stage. </p>
+      <br>
+      <br>
+      <label>Color:</label>
+      <select class="color-select">
+        <option value="Silver">Silver</option>
+        <option value="Starlight">Starlight</option>
+        <option value="Midnight">Midnight</option>
+        <option value="Sky blue">Sky Blue</option>
+      </select>
+      <br>
+      <label>Storage:</label>
+      <select class="storage-select" onchange="updatePrice(this)">
+        <option value="128" data-price="4,499">128GB — RM4,499</option>
+        <option value="256" data-price="5,349">256GB — RM5,349</option>
+        <option value="512" data-price="6,199">512GB— RM6,199</option>
+      </select>
+
+      <div class="price">RM4,499</div>
+
+      <a href="checkout.html" class="buy-btn" onclick="goToCheckout(this)">Buy Now</a>
+    </div>
+
+    <div class="product-card">
+      <img src="macpro.jpg" alt="Macbook Pro">
+      <h3>Macbook Pro</h3>
+      <p style="text-align: justify;">Features the powerful M3 family of chips—M3, M3 Pro, and M3 Max—offering breakthrough CPU/GPU performance. </p>
+      <br>
+      <br>
+      <label>Color:</label>
+      <select class="color-select">
+        <option value="Silver">Silver</option>
+        <option value="Black">Black</option>
+      </select>
+      <br>
+      <label>Storage:</label>
+      <select class="storage-select" onchange="updatePrice(this)">
+        <option value="512" data-price="7,499">512GB — RM7,499</option>
+        <option value="1" data-price="8,299">1TB — RM8,299</option>
+      </select>
+
+      <div class="price">RM7,499</div>
+
+      <a href="checkout.html" class="buy-btn" onclick="goToCheckout(this)">Buy Now</a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="contact.html" data-en="Contact Us" data-bm="Hubungi Kami">Contact Us</a>
+    </div>
+    <br>
+    <div><a href="https://instagram.com/neurotech" target="_blank">
+    <img src="ig.jpg" alt="Instagram" width="24" height="24"></a>
+    <a href="https://facebook.com/neurotech" target="_blank">
+    <img src="fb.jpg" alt="Facebook" width="24" height="24"></a>
+    <a href="https://tiktok.com/neurotech" target="_blank">
+    <img src="tt.jpg" alt="TikTok" width="24" height="24"></a>
+    </div>
+    <p data-en="&copy; 2025 NeuroTech. All rights reserved." data-bm="&copy; 2025 NeuroTech. Semua hak cipta terpelihara.">
+      &copy; 2025 NeuroTech. All rights reserved.
+    </p>
+    
+  </footer>
+
+  <!-- Language Switcher Script -->
+  <script>
+    const langSelect = document.getElementById('language-select');
+    langSelect.addEventListener('change', function () {
+      const lang = this.value;
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.textContent = link.getAttribute(data-${lang});
+      });
+    });
+  </script>
+  
+  <script>
+    function updatePrice(selectElement) {
+      const selectedOption = selectElement.options[selectElement.selectedIndex];
+      const newPrice = selectedOption.getAttribute('data-price');
+
+      // Find the nearest parent product card (if using multiple cards)
+      const card = selectElement.closest('.product-card') || document;
+
+      // Update the price display
+      const priceDiv = card.querySelector('.price');
+      priceDiv.textContent = "RM" + newPrice;
+    }
+  </script>
+  
+  <script>
+    function goToCheckout(button) {
+      const card = button.closest('.product-card');
+      const product = card.querySelector('h3').textContent;
+      const color = card.querySelector('.color-select').value;
+      const storage = card.querySelector('.storage-select').value;
+      const price = card.querySelector('.price').textContent;
+
+      const url = checkout.html?product=${encodeURIComponent(product)}&color=${color}&storage=${storage}&price=${price};
+      window.location.href = url;
+    }
+  </script>
+
+</body>
+</html>

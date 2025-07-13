@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Neurotech Gadget</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="sidebar" id="sidebar">
+    <a href="#" class="closebtn" onclick="closeSidebar()">×</a>
+    <a href="#">Home</a>
+    <a href="#">About Us</a>
+    <a href="#">Product</a>
+    <a href="#">Services</a>
+    <a href="#">Corporate Info</a>
+    <a href="#">Contact Us</a>
+  </div>
+
+  <button class="openbtn" onclick="openSidebar()">☰ Menu</button>
+
+  <div class="main">
+    <h1>Neurotech Gadgets</h1>
+    <p>This is your main content.</p>
+  </div>
+
+  <script>
+    function openSidebar() {
+      document.getElementById("sidebar").style.width = "250px";
+    }
+
+    function closeSidebar() {
+      document.getElementById("sidebar").style.width = "0";
+    }
+  </script>
+
+</body>
+</html>

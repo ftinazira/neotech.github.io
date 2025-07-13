@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background: #f2f2f2;
+      text-align: center;
+    }
+
+    .checkout-box {
+      background: white;
+      padding: 30px;
+      max-width: 400px;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    input, button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background: #2196F3;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0b7dda;
+    }
+
+    input[readonly] {
+      background-color: #eee;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="checkout-box">
+    <h1>Checkout</h1>
+    <p>Complete your purchase below:</p>
+    <form>
+      <input type="text" id="product" name="product" placeholder="Product Name" readonly>
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <input type="text" placeholder="Shipping Address" required>
+      <button type="submit">Confirm Order</button>
+    </form>
+  </div>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const productName = urlParams.get('product');
+    document.getElementById('product').value = productName || 'Unknown Product';
+  </script>
+
+</body>
+</html>
